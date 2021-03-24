@@ -1,0 +1,19 @@
+{
+    "pipeline": [
+        "/Users/isara/Documents/SeniorProject/UAVarena/pdal/pointcloud/kampang.las",
+        {
+            "type": "filters.elm"
+        },
+        {
+            "type":"filters.smrf"
+        },
+        {
+            "type":"filters.range",
+            "limits":"Classification[2:2]"
+        },
+        {
+            "filename":"/Users/isara/Documents/SeniorProject/UAVarena/pdal/output/dtm-pdal-pix4d-demo.las",
+            "type": "writers.las"
+        }
+    ]
+}
